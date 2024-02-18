@@ -3,31 +3,58 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #362726;
+  --sec-color: #edceab;
+  /* --muted-color: #f6ede3; */
+  --muted-color: #e9ded1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--muted-color);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.tow-container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 1280px) {
+  .tow-container {
+    max-width: 1184px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
+}
+
+.txtHover {
+  color: var(--sec-color) !important;
+}
+
+.txtHover:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.tow-vector {
+  transform: rotate(304deg);
+  height: 150%;
+  right: -315px;
+  width: 622px;
+}
+
+.tow-tab span {
+  border: none !important;
+  box-shadow: none !important;
+  background-color: var(--sec-color);
+  padding: 18px 70px !important;
 }
