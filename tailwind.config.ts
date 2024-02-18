@@ -21,14 +21,14 @@ const config: Config = {
         "neutral-primary": "#362726",
         "neutral-secondary": "#fff5ea",
         "action-secondary": "#edceab",
+        "action-primary-light": "#C67C4E",
       },
       textColor: {
         "tow-primary": "#362726",
         "tow-secondary": "#edceab",
         secondary: "#433838",
-      },
-      fontFamily: {
-        "tow-fonts": "",
+        "primary-light": "#edceab",
+        "tow-muted": "#6c5a45",
       },
     },
   },

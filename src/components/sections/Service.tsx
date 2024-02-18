@@ -44,7 +44,7 @@ const Service = () => {
   ];
   return (
     <>
-      <Container classNames="py-[48px] min-h-auto">
+      <Container classNames="md:py-[48px] min-h-auto">
         <div className="w-full">
           <div>
             <h2 className="font-semibold text-tow-primary mt-0 text-4xl md:text-6xl mb-6 md:text-center md:mb-12">
@@ -69,7 +69,7 @@ const Service = () => {
                     data-hp-target="rides"
                   >
                     <h5
-                      className="font-semibold mt-0 text-lg md:text-2xl mb-2"
+                      className="font-semibold overflow-hidden w--[80%] block overflow-ellipsis text-tow-primary mt-0 text-lg md:text-2xl mb-2"
                       data-hp-menu="services"
                       data-hp-target="rides"
                     >

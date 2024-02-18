@@ -13,11 +13,20 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 
-const ListItem = ({ title, isActive, url, hasDropdown, sub }: ListItemFunc) => {
+const ListItem = ({
+  title,
+  isActive,
+  url,
+  hasDropdown,
+  sub,
+  className,
+}: ListItemFunc) => {
   const [isOpen, setIsOpen] = useState(false);
   // console.log(sub);
   return (
-    <li className="self-center cursor-pointer mr-1 txtHover rounded-[30px]">
+    <li
+      className={`self-center cursor-pointer mr-1 txtHover rounded-[30px] ${className}`}
+    >
       {!hasDropdown ? (
         <Link
           href={url}
@@ -106,7 +115,7 @@ const ListItem = ({ title, isActive, url, hasDropdown, sub }: ListItemFunc) => {
 
 const Header = () => {
   return (
-    <nav className="h-[64px]  py-3 text-base flex leading-6 z-[2002] absolute w-full">
+    <nav className="h-[64px] py-3 text-base flex leading-6 z-[2002] fixed md:absolute w-full">
       <div className="tow-container">
         <div className="flex flex-row items-center">
           <Link
@@ -116,7 +125,7 @@ const Header = () => {
             TowGency
           </Link>
         </div>
-        <ul className="flex flex-1 mx-6 overflow-hidden visible">
+        <ul className="hidden md:flex w-full mx-6 overflow-hidden visible">
           {HeaderItem.map((item) => (
             <ListItem
               key={item?.id}
@@ -125,20 +134,46 @@ const Header = () => {
               isActive={false}
               hasDropdown={item?.hasSub}
               sub={item?.sub}
+              className="tow-hide-tab"
             />
           ))}
         </ul>
-        <ul className="flex justify-end space-x-4 m-0 ">
+        <ul className="w-full flex justify-end space-x-4 m-0 ">
           <ListItem
             title={"Support"}
             url={"/"}
             isActive={false}
             hasDropdown={false}
             sub={[]}
+            className="tow-hidden-mb"
           />
-          <Button className="rounded-[30px] bg-tow-secondary h-auto text-tow-primary text-base">
-            Sign up
-          </Button>
+          <li className="flex items-center tow-hidden justify-center">
+            <Button className="rounded-[30px] bg-tow-secondary h-full text-tow-primary text-base">
+              Sign up
+            </Button>
+          </li>
+          <li className="tow-show-mob flex flex-row items-center justify-end min-w-12 ">
+            <Button
+              className="p-[10px] leading-4 text-tow-secondary rounded-full transition-all duration-[.3s] bg-[rgba(255,255,255,.1)] hover:bg-[rgba(255,255,255,.4)]"
+              style={{
+                // background: "transparent",
+                width: "auto",
+                height: "auto",
+                minWidth: "unset",
+              }}
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                color="currentColor"
+              >
+                <path d="M2 6h20v3H2V6Z" fill="currentColor"></path>,
+                <path d="M2 15h20v3H2v-3Z" fill="currentColor"></path>
+              </svg>
+            </Button>
+          </li>
         </ul>
       </div>
     </nav>

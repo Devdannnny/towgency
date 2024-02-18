@@ -8,7 +8,7 @@ import FeatureOne from "./FeatureOne";
 const Features = () => {
   const [selected, setSelected] = React.useState<any>("motorist");
   return (
-    <Container classNames="py-[48px]">
+    <Container classNames="py-0 md:py-[48px]">
       <div className="flex w-full flex-col">
         <Tabs
           radius="full"
@@ -16,9 +16,10 @@ const Features = () => {
           selectedKey={selected}
           onSelectionChange={setSelected}
           classNames={{
-            tabList: "bg-transparent border-none shadow-none min-w-[400px]",
-            tabContent: "font-medium text-[20px] border-none shadow-none",
-            tab: "tow-tab h-[60px]",
+            tabList: "bg-transparent border-none shadow-none md:min-w-[400px]",
+            tabContent:
+              "font-medium text-[17px] md:text-[20px] border-none shadow-none",
+            tab: "tow-tab tow-tab-bg h-[40px] md:h-[60px]",
           }}
         >
           <Tab key="motorist" title="Motorist">

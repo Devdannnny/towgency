@@ -9,6 +9,7 @@ export type ListItemFunc = {
   url: string;
   hasDropdown?: boolean;
   sub: ListSubItemFunc;
+  className?: string;
 };
 
 export type TChildren = {

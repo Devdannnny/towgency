@@ -9,13 +9,13 @@ import { Tab, Tabs } from "@nextui-org/react";
 const DownloadApp = () => {
   return (
     <>
-      <Container classNames="pt-[28px] pb-[48px] min-h-screen">
-        <div className="w-full h-full py-[80px] px-12 bg-tow-primary rounded-[24px]">
+      <Container classNames=" pt-[48px] pb-[48px] md:min-h-screen noMarg">
+        <div className="w-full h-full py-12 md:py-[80px] px-5 md:px-12 bg-tow-primary md:rounded-[24px]">
           <div className="flex items-center justify-center pb-14">
             <Tabs
               classNames={{
                 tabList:
-                  "bg-transparent rounded-xl border-none shadow-none min-w-[400px]",
+                  "bg-transparent rounded-xl border-none shadow-none md:min-w-[400px]",
                 tabContent:
                   "font-medium text-[20px] rounded-[24px] border-none shadow-none",
                 tab: "tow-tab h-[60px] rounded-[24px]",
@@ -33,7 +33,7 @@ const DownloadApp = () => {
               />
             </Tabs>
           </div>
-          <div className="flex w-full mt-3 flex-row gap-[48px] ">
+          <div className="flex w-full mt-3 flex-col md:flex-row gap-[48px] ">
             <div
               className=" w-full"
               style={{
@@ -43,7 +43,7 @@ const DownloadApp = () => {
             >
               <div>
                 <div
-                  className="flex flex-row space-x-2 justify-start items-center whitespace-nowrap"
+                  className="flex flex-row mob-center space-x-2 justify-start items-center whitespace-nowrap"
                   style={{
                     gridAutoRows: "auto",
                   }}
@@ -73,14 +73,14 @@ const DownloadApp = () => {
                   </div>
                 </div>
               </div>
-              <h2 className="mb-6 font-bold text-tow-secondary text-[70px] mt-12 leading-[1]">
+              <h2 className="mb-6 font-bold mob-center text-tow-secondary text-[40px] md:text-[70px] mt-5 md:mt-12 leading-[1.1] md:leading-[1]">
                 Download the TowGency app
               </h2>
-              <p className="text-[24px] text-tow-secondary font-normal mb-6">
+              <p className=" text-[19px] md:text-[24px] mob-center text-tow-secondary font-normal mb-6">
                 Hit the road again with the TowGency app! No problem is too big
                 for us to handle.
               </p>
-              <div>
+              <div className="mob-center">
                 <Link
                   href="/"
                   className="relative p-5 overflow-hidden rounded-lg inline-block"
@@ -105,8 +105,8 @@ const DownloadApp = () => {
                 inlineSize: "100%",
               }}
             >
-              <div className="flex gap-[30px] items-center justify-end ">
-                <div className="overflow-hidden relative block rounded-6 w-[216px] h-[469px] ">
+              <div className="flex gap-[30px] items-center justify-center md:justify-end ">
+                <div className="overflow-hidden relative hidden md:block rounded-6 w-[80%] md:w-[216px] md:h-[469px] ">
                   <Image
                     src="/assets/images/mockup/phone-1.webp"
                     alt=""
@@ -114,15 +114,17 @@ const DownloadApp = () => {
                     className="block w-full h-full "
                     style={{
                       aspectRatio: "260/563",
+                      objectFit: "contain",
                     }}
                   />
                 </div>
-                <div className="overflow-hidden relative block rounded-6 w-[175px] h-[374px] ">
+                <div className="overflow-hidden rounded-[24px] relative block rounded-6 h-[500px] md:w-[175px] md:h-[374px] ">
                   <video
                     preload="auto"
-                    className="border-[2px] border-solid rounded-[24px]"
+                    className="border-[2px] overflow-hidden border-solid h-full rounded-[24px]"
                     style={{
                       borderColor: "#362726",
+                      objectFit: "contain",
                     }}
                     loop
                     muted
