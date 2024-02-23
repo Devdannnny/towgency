@@ -12,6 +12,7 @@ import {
 } from "@nextui-org/react";
 import Link from "next/link";
 import { useState } from "react";
+import Signup from "../Widget/SignupModal";
 
 const ListItem = ({
   title,
@@ -148,9 +149,7 @@ const Header = () => {
             className="tow-hidden-mb"
           />
           <li className="flex items-center tow-hidden justify-center">
-            <Button className="rounded-[30px] bg-tow-secondary h-full text-tow-primary text-base">
-              Sign up
-            </Button>
+            <Signup />
           </li>
           <li className="tow-show-mob flex flex-row items-center justify-end min-w-12 ">
             <Button

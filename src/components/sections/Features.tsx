@@ -16,7 +16,8 @@ const Features = () => {
           selectedKey={selected}
           onSelectionChange={setSelected}
           classNames={{
-            tabList: "bg-transparent border-none shadow-none md:min-w-[400px]",
+            tabList:
+              "bg-transparent border-none shadow-none md:min-w-[400px] gap-4",
             tabContent:
               "font-medium text-[17px] md:text-[20px] border-none shadow-none",
             tab: "tow-tab tow-tab-bg h-[40px] md:h-[60px]",
@@ -48,7 +49,33 @@ const Features = () => {
               />
             </div>
           </Tab>
-          <Tab key="sproviders" title="Service Providers">
+          <Tab key="tdriver" title="Towing Truck Drivers">
+            <div className="py-8">
+              <FeatureOne
+                title="We know that towing and roadside Service Providers are the backbone of Ghana's roads"
+                bgImag="/assets/images/bg/tow-bg-4.jpeg"
+                url="/"
+                FeatList={[
+                  {
+                    id: 0,
+                    title: "More jobs near you",
+                    desc: `Choose TowGency, the leading tech provider, for the digital tools that drive business growth and help you connect with nearby stranded motorists efficiently.`,
+                  },
+                  {
+                    id: 1,
+                    title: "Get paid instantly",
+                    desc: `Get instant, detailed job alerts through the TowGency Partner App, complete the job, and receive payment within minutes instead of waiting for days or weeks.`,
+                  },
+                  {
+                    id: 2,
+                    title: "No cost, no risk to join",
+                    desc: `Join the TowGency network as an independent service provider for free. Get started quickly and sign up today to start earning more money.`,
+                  },
+                ]}
+              />
+            </div>
+          </Tab>
+          <Tab key="amechanic" title="Auto Mechanic">
             <div className="py-8">
               <FeatureOne
                 title="We know that towing and roadside Service Providers are the backbone of Ghana's roads"
