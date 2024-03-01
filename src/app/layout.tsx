@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { towFonts } from "@devdanny/lib/fonts";
 import { Providers } from "@devdanny/components/shared/Provider";
+import { SFooter } from "@devdanny/components/sections";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
           <main>
             <Header />
             {children}
+            <SFooter />
           </main>
         </Providers>
       </body>

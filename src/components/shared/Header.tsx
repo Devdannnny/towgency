@@ -1,6 +1,5 @@
 "use client";
 
-import { HeaderItem } from "@devdanny/lib/data";
 import { towFonts } from "@devdanny/lib/fonts";
 import { ListItemFunc } from "@devdanny/types/shared";
 import {
@@ -13,6 +12,7 @@ import {
 import Link from "next/link";
 import { useState } from "react";
 import Signup from "../Widget/SignupModal";
+import { HeaderItem } from "@devdanny/lib/data";
 
 const ListItem = ({
   title,
@@ -116,7 +116,7 @@ const ListItem = ({
 
 const Header = () => {
   return (
-    <nav className="h-[64px] py-3 text-base flex leading-6 z-[2002] fixed md:absolute w-full">
+    <nav className="h-[64px] py-3 text-base flex leading-6 z-[30] fixed md:absolute w-full">
       <div className="tow-container">
         <div className="flex flex-row items-center">
           <Link

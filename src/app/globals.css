@@ -73,6 +73,23 @@ body {
   display: none;
 }
 
+.tow-card {
+  background-color: #fff;
+  border-radius: 16px;
+  display: grid;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
+  /* -webkit-transform: translateZ(0);
+  transform: translateZ(0); */
+}
+
+@media (min-width: 960px) {
+  .mjwfhpf {
+    max-width: 464px;
+  }
+}
+
 @media (max-width: 1135px) {
   .tow-hide-tab {
     display: none;
@@ -111,5 +128,11 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .tow-card {
+    border-radius: 0;
   }
 }

@@ -1,12 +1,6 @@
 import Banner from "@devdanny/components/Widget/Banner";
-import {
-  SDownload,
-  SFeatures,
-  SFooter,
-  SService,
-} from "@devdanny/components/sections";
+import { SDownload, SFeatures, SService } from "@devdanny/components/sections";
 import Container from "@devdanny/components/sections/Container";
-import React from "react";
 
 const LandingPage = () => {
   return (
@@ -22,7 +16,6 @@ const LandingPage = () => {
       <SFeatures />
       <SService />
       <SDownload />
-      <SFooter />
     </>
   );
 };

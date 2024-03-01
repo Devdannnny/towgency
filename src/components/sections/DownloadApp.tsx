@@ -28,7 +28,7 @@ const DownloadApp = () => {
               selectedKey={selected}
               onSelectionChange={setSelected}
             >
-              <Tab className="rounded-xl" key="motorist" title="Motorist" />
+              <Tab className="rounded-xl" key="motorist" title="Drivers" />
               <Tab
                 className="rounded-xl"
                 key="sproviders"
@@ -98,7 +98,7 @@ const DownloadApp = () => {
                       src={"/assets/images/bg/tow-qrcode.png"}
                       alt=""
                       fill
-                      objectFit="cover"
+                      // objectFit="cover"
                     />
                   </Link>
                 </div>
@@ -187,7 +187,7 @@ const DownloadApp = () => {
                   </div>
                 </div>
                 <div className=" mt-5 md:mt-12">
-                  <p className="text-[20px] md:text-[20px] font-medium text-tow-secondary">
+                  <p className="text-[20px] text-center md:text-left md:text-[20px] font-medium text-tow-secondary">
                     Including Tow Truck Drivers and Auto Mechanics
                   </p>
                 </div>
@@ -212,7 +212,7 @@ const DownloadApp = () => {
                       src={"/assets/images/bg/tow-qrcode.png"}
                       alt=""
                       fill
-                      objectFit="cover"
+                      // objectFit="cover"
                     />
                   </Link>
                 </div>
